@@ -1,0 +1,52 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Kosmos 2",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "kosmos-2/demo_kosmos2.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "TEACHER_FORCING": "0",
+                "GENERATION": "1",
+                "FORCE_CPU": "1",
+            }
+        },
+        {
+            "name": "OpenFlamingo",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "open-flamingo/demo_open_flamingo.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "FORCE_CPU": "1",
+                "IN_CONTEXT_LEARNING": "1",
+                "CAPTIONING": "0",
+            }
+        },
+        {
+            "name": "TinyLLaVA - gradio",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "TinyLLaVABench/tinyllava/serve/app.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "FORCE_CPU": "1",
+            },
+            "args": [
+                "--model-path", "bczhou/TinyLLaVA-1.5B",
+                "--model-name", "TinyLLaVA-1.5B" 
+            ]
+        }
+    ]
+}
